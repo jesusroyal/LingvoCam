@@ -13,6 +13,7 @@
 		67192C75250E23F10057E163 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67192C73250E23F10057E163 /* Main.storyboard */; };
 		67192C77250E23FB0057E163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67192C76250E23FB0057E163 /* Assets.xcassets */; };
 		67192C7A250E23FB0057E163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67192C78250E23FB0057E163 /* LaunchScreen.storyboard */; };
+		671E29442513656B0095E227 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671E29432513656B0095E227 /* TranslationService.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -24,6 +25,7 @@
 		67192C76250E23FB0057E163 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		67192C79250E23FB0057E163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67192C7B250E23FB0057E163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		671E29432513656B0095E227 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -59,6 +61,7 @@
 				67192C6D250E23F10057E163 /* AppDelegate.swift */,
 				67192C6F250E23F10057E163 /* SceneDelegate.swift */,
 				67192C71250E23F10057E163 /* ViewController.swift */,
+				671E29432513656B0095E227 /* TranslationService.swift */,
 				67192C73250E23F10057E163 /* Main.storyboard */,
 				67192C76250E23FB0057E163 /* Assets.xcassets */,
 				67192C78250E23FB0057E163 /* LaunchScreen.storyboard */,
@@ -141,6 +144,7 @@
 				67192C72250E23F10057E163 /* ViewController.swift in Sources */,
 				67192C6E250E23F10057E163 /* AppDelegate.swift in Sources */,
 				67192C70250E23F10057E163 /* SceneDelegate.swift in Sources */,
+				671E29442513656B0095E227 /* TranslationService.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
