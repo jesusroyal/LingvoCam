@@ -13,8 +13,8 @@ final class TranslationService {
     
     
     static func translate(text: String, completion: @escaping (String) -> Void){
-        let sourceLang = "ru"
-        let targetLang = "en"
+        let sourceLang = "en"
+        let targetLang = "ru"
         let convertedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed )!
         
         let rawUrl = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=\(sourceLang)&tl=\(targetLang)&dt=t&q=\(convertedText)";
