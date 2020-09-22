@@ -15,6 +15,7 @@ final class TranslationService {
     
     private var timer: Timer?
     private var requestIsAllowed = true
+    var targetLanguage = "ru"
     
      private func blockRequests(){
         requestIsAllowed = false
@@ -36,10 +37,9 @@ final class TranslationService {
 
     func translate(text: String, completion: @escaping (String?) -> Void){
         let sourceLang = "en"
-        let targetLang = "ru"
         let convertedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed )!
         
-        let rawUrl = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=\(sourceLang)&tl=\(targetLang)&dt=t&q=\(convertedText)";
+        let rawUrl = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=\(sourceLang)&tl=\(targetLanguage)&dt=t&q=\(convertedText)";
         
         let url = URL(string: rawUrl)
         

@@ -91,16 +91,16 @@
             </objects>
             <point key="canvasLocation" x="1077.5999999999999" y="138.98050974512745"/>
         </scene>
-        <!--Table View Controller-->
+        <!--Settings-->
         <scene sceneID="qV8-db-yMv">
             <objects>
-                <tableViewController id="7Tb-0O-sMg" sceneMemberID="viewController">
+                <tableViewController title="Settings" id="7Tb-0O-sMg" customClass="SettingsTableViewController" customModule="LingvoCam" customModuleProvider="target" sceneMemberID="viewController">
                     <tableView key="view" clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" id="acF-1q-XJJ">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <prototypes>
-                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" id="vMX-G3-Zi5">
+                            <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="settingsCell" id="vMX-G3-Zi5">
                                 <rect key="frame" x="0.0" y="28" width="375" height="43.5"/>
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vMX-G3-Zi5" id="3QC-MJ-o5m">
@@ -114,8 +114,8 @@
                             <outlet property="delegate" destination="7Tb-0O-sMg" id="CDe-70-DiX"/>
                         </connections>
                     </tableView>
-                    <navigationItem key="navigationItem" id="5Pz-QQ-OgR"/>
-                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics" prompted="NO"/>
+                    <navigationItem key="navigationItem" title="Settings" id="5Pz-QQ-OgR"/>
+                    <simulatedNavigationBarMetrics key="simulatedTopBarMetrics"/>
                 </tableViewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="lHr-8B-W0W" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
