@@ -12,7 +12,9 @@ import Vision
 
 class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
-   
+	@IBOutlet weak var sourceWord: UILabel!
+	@IBOutlet weak var translatedWord: UILabel!
+	
     
     @IBOutlet weak private var previewView: UIView!
     
@@ -22,6 +24,9 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 		prepareAVCapture()
 		
 	}
+	
+	
+	
 	
 	private func prepareAVCapture(){
 		
@@ -56,8 +61,12 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 		let request = VNCoreMLRequest(model: try! VNCoreMLModel(for: Inceptionv3().model)) { (req, err) in
 			guard let results = req.results as? [VNClassificationObservation] else { return }
 			
-			TranslationService.translate(text: results.first!.identifier) { (res) in
-				print(res)
+			TranslationService.instance.translate(text: results.first!.identifier.firstWord()!) { (res) in
+				DispatchQueue.main.async {
+					self.sourceWord.text = results.first!.identifier.firstWord()!
+					self.translatedWord.text = res ?? "Ошибка"
+				}
+				
 			}
 		}
 		

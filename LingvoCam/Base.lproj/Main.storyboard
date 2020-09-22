@@ -20,18 +20,50 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                             </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="MkD-aA-1Zc">
+                                <rect key="frame" x="30" y="490.5" width="315" height="176.5"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Оригинал" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="30r-ps-w4P">
+                                        <rect key="frame" x="20" y="20" width="275" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Перевод" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="rvf-HV-roS">
+                                        <rect key="frame" x="20" y="70" width="275" height="30"/>
+                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemIndigoColor"/>
+                                <constraints>
+                                    <constraint firstItem="30r-ps-w4P" firstAttribute="leading" secondItem="MkD-aA-1Zc" secondAttribute="leading" constant="20" id="3Fq-YL-LP6"/>
+                                    <constraint firstAttribute="trailing" secondItem="30r-ps-w4P" secondAttribute="trailing" constant="20" id="8ts-gj-uuO"/>
+                                    <constraint firstItem="rvf-HV-roS" firstAttribute="leading" secondItem="MkD-aA-1Zc" secondAttribute="leading" constant="20" id="Zae-cR-E4X"/>
+                                    <constraint firstAttribute="trailing" secondItem="rvf-HV-roS" secondAttribute="trailing" constant="20" id="baT-sU-nAH"/>
+                                    <constraint firstAttribute="width" secondItem="MkD-aA-1Zc" secondAttribute="height" multiplier="16:9" constant="1" id="dVg-Zb-mNY"/>
+                                    <constraint firstItem="rvf-HV-roS" firstAttribute="top" secondItem="30r-ps-w4P" secondAttribute="bottom" constant="20" id="mcb-MQ-eYc"/>
+                                    <constraint firstItem="30r-ps-w4P" firstAttribute="top" secondItem="MkD-aA-1Zc" secondAttribute="top" constant="20" id="yoh-tg-sYf"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                         <constraints>
                             <constraint firstItem="fJg-dO-fPw" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="A5E-iX-xOh"/>
-                            <constraint firstItem="fJg-dO-fPw" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="cVd-UT-L4E"/>
+                            <constraint firstItem="fJg-dO-fPw" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="cVd-UT-L4E"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="MkD-aA-1Zc" secondAttribute="trailing" constant="30" id="gBl-NG-KFz"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="MkD-aA-1Zc" secondAttribute="bottom" id="icN-Mx-h7L"/>
                             <constraint firstItem="fJg-dO-fPw" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="qnT-NX-hZ2"/>
-                            <constraint firstItem="fJg-dO-fPw" firstAttribute="bottom" secondItem="6Tk-OE-BBY" secondAttribute="bottom" id="xyq-Qu-6j8"/>
+                            <constraint firstItem="MkD-aA-1Zc" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="sva-rJ-IZg"/>
+                            <constraint firstItem="fJg-dO-fPw" firstAttribute="bottom" secondItem="8bC-Xf-vdC" secondAttribute="bottom" id="xyq-Qu-6j8"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="previewView" destination="fJg-dO-fPw" id="Zl6-lZ-MLu"/>
+                        <outlet property="sourceWord" destination="30r-ps-w4P" id="tnC-SJ-CEa"/>
+                        <outlet property="translatedWord" destination="rvf-HV-roS" id="9lB-fH-4Cx"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
@@ -42,6 +74,9 @@
     <resources>
         <systemColor name="systemBackgroundColor">
             <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+        <systemColor name="systemIndigoColor">
+            <color red="0.34509803921568627" green="0.33725490196078434" blue="0.83921568627450982" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </systemColor>
     </resources>
 </document>

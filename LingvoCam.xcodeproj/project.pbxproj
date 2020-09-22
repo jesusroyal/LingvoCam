@@ -14,6 +14,7 @@
 		67192C77250E23FB0057E163 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 67192C76250E23FB0057E163 /* Assets.xcassets */; };
 		67192C7A250E23FB0057E163 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 67192C78250E23FB0057E163 /* LaunchScreen.storyboard */; };
 		671E29442513656B0095E227 /* TranslationService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 671E29432513656B0095E227 /* TranslationService.swift */; };
+		67C05303251A3DE8004BCA69 /* String+extension.swift in Sources */ = {isa = PBXBuildFile; fileRef = 67C05302251A3DE8004BCA69 /* String+extension.swift */; };
 		67D416962515375900F93914 /* Inceptionv3.mlmodel in Sources */ = {isa = PBXBuildFile; fileRef = 67D416952515375900F93914 /* Inceptionv3.mlmodel */; };
 /* End PBXBuildFile section */
 
@@ -27,6 +28,7 @@
 		67192C79250E23FB0057E163 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		67192C7B250E23FB0057E163 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		671E29432513656B0095E227 /* TranslationService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TranslationService.swift; sourceTree = "<group>"; };
+		67C05302251A3DE8004BCA69 /* String+extension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "String+extension.swift"; sourceTree = "<group>"; };
 		67D416952515375900F93914 /* Inceptionv3.mlmodel */ = {isa = PBXFileReference; lastKnownFileType = file.mlmodel; path = Inceptionv3.mlmodel; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -64,6 +66,7 @@
 				67192C6F250E23F10057E163 /* SceneDelegate.swift */,
 				67192C71250E23F10057E163 /* HomeViewController.swift */,
 				671E29432513656B0095E227 /* TranslationService.swift */,
+				67C05302251A3DE8004BCA69 /* String+extension.swift */,
 				67192C73250E23F10057E163 /* Main.storyboard */,
 				67192C76250E23FB0057E163 /* Assets.xcassets */,
 				67192C78250E23FB0057E163 /* LaunchScreen.storyboard */,
@@ -100,7 +103,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1170;
-				LastUpgradeCheck = 1170;
+				LastUpgradeCheck = 1200;
 				ORGANIZATIONNAME = "Mike Shevelinsky";
 				TargetAttributes = {
 					67192C69250E23F10057E163 = {
@@ -146,6 +149,7 @@
 			files = (
 				67D416962515375900F93914 /* Inceptionv3.mlmodel in Sources */,
 				67192C72250E23F10057E163 /* HomeViewController.swift in Sources */,
+				67C05303251A3DE8004BCA69 /* String+extension.swift in Sources */,
 				67192C6E250E23F10057E163 /* AppDelegate.swift in Sources */,
 				67192C70250E23F10057E163 /* SceneDelegate.swift in Sources */,
 				671E29442513656B0095E227 /* TranslationService.swift in Sources */,
@@ -200,6 +204,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -260,6 +265,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
