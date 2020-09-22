@@ -14,6 +14,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 
 	@IBOutlet weak var sourceWord: UILabel!
 	@IBOutlet weak var translatedWord: UILabel!
+	@IBOutlet weak var mainPadding: UIView!
 	
     
     @IBOutlet weak private var previewView: UIView!
@@ -22,11 +23,16 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 	override func viewDidLoad(){
 		super.viewDidLoad()
 		prepareAVCapture()
+		prepareLabels()
 		
 	}
 	
 	
-	
+	private func prepareLabels(){
+		translatedWord.layer.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.5568627451, alpha: 1)
+		translatedWord.layer.cornerRadius = 15.0
+		mainPadding.layer.cornerRadius = 15.0
+	}
 	
 	private func prepareAVCapture(){
 		
