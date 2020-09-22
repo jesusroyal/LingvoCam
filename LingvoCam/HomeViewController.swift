@@ -12,6 +12,7 @@ import Vision
 
 class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
 
+	@IBOutlet weak var settingsButton: UIButton!
 	@IBOutlet weak var sourceWord: UILabel!
 	@IBOutlet weak var translatedWord: UILabel!
 	@IBOutlet weak var mainPadding: UIView!
@@ -29,6 +30,7 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 		translatedWord.layer.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.5568627451, alpha: 1)
 		translatedWord.layer.cornerRadius = 15.0
 		mainPadding.layer.cornerRadius = 15.0
+		settingsButton.layer.cornerRadius = 15.0
 	}
 	
 	private func prepareAVCapture(){
