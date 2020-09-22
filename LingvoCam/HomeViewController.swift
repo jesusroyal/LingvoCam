@@ -26,6 +26,16 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 		prepareLabels()
 	}
 	
+	override func viewWillAppear(_ animated: Bool) {
+		self.navigationController?.setNavigationBarHidden(true, animated: animated)
+		super.viewWillAppear(animated)
+	}
+
+	override func viewWillDisappear(_ animated: Bool) {
+		self.navigationController?.setNavigationBarHidden(false, animated: animated)
+		super.viewWillDisappear(animated)
+	} 
+	
 	private func prepareLabels(){
 		translatedWord.layer.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.5568627451, alpha: 1)
 		translatedWord.layer.cornerRadius = 15.0
