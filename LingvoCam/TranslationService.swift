@@ -30,6 +30,7 @@ final class TranslationService {
     
     @objc private func allowRequests(){
         requestIsAllowed = true
+        timer?.invalidate()
     }
     
 
