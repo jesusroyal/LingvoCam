@@ -15,10 +15,12 @@ final class TranslationService {
     
     private var timer: Timer?
     private var requestIsAllowed = true
+    private let sourceLang = "en"
     var targetLanguage = "ru"
     
      private func blockRequests(){
         requestIsAllowed = false
+        
         DispatchQueue.main.async {
             self.timer = Timer.scheduledTimer(timeInterval: 5.0,
                                               target: self,
@@ -26,7 +28,6 @@ final class TranslationService {
                                               userInfo: nil,
                                               repeats: false)
         }
-        
     }
     
     @objc private func allowRequests(){
@@ -36,25 +37,19 @@ final class TranslationService {
     
 
     func translate(text: String, completion: @escaping (String?) -> Void){
-        let sourceLang = "en"
+        
         let convertedText = text.addingPercentEncoding(withAllowedCharacters: .urlHostAllowed )!
-        
         let rawUrl = "https://translate.googleapis.com/translate_a/single?client=gtx&sl=\(sourceLang)&tl=\(targetLanguage)&dt=t&q=\(convertedText)";
-        
         let url = URL(string: rawUrl)
         
         let session = URLSession(configuration: .default)
-        
         let dataTask = session.dataTask(with: url!) {data , response, error in
             
             guard let jsonData = try? JSONSerialization.jsonObject(with: data!, options: JSONSerialization.ReadingOptions()) as? [Any] else {
                 completion(nil)
                 return
             }
-            
             let translatedWord = ((jsonData[0] as! [Any])[0] as! [Any])[0] as! String
-            
-       
             
             completion(translatedWord)
         }

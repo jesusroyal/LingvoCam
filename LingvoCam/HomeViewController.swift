@@ -10,18 +10,25 @@ import UIKit
 import AVKit
 import Vision
 
-class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBufferDelegate {
+final class HomeViewController: UIViewController {
 
+	// MARK: - IBOutlets
+	
 	@IBOutlet weak var settingsButton: UIButton!
 	@IBOutlet weak var sourceWord: UILabel!
 	@IBOutlet weak var translatedWord: UILabel!
 	@IBOutlet weak var mainPadding: UIView!
-    @IBOutlet weak private var previewView: UIView!
+	@IBOutlet weak var previewView: UIView!
+	
+	// MARK: - Private Properties
 	
 	private let model = try! VNCoreMLModel(for: Inceptionv3(configuration: MLModelConfiguration()).model)
 	
+	// MARK: - Lifecycle
+	
 	override func viewDidLoad(){
 		super.viewDidLoad()
+		
 		prepareAVCapture()
 		prepareLabels()
 	}
@@ -34,11 +41,14 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 	override func viewWillDisappear(_ animated: Bool) {
 		self.navigationController?.setNavigationBarHidden(false, animated: animated)
 		super.viewWillDisappear(animated)
-	} 
+	}
+	
+	// MARK: - Private Methods
 	
 	private func prepareLabels(){
 		translatedWord.layer.backgroundColor = #colorLiteral(red: 0.2392156863, green: 0.231372549, blue: 0.5568627451, alpha: 1)
 		translatedWord.layer.cornerRadius = 15.0
+		
 		mainPadding.layer.cornerRadius = 15.0
 		settingsButton.layer.cornerRadius = 15.0
 	}
@@ -61,9 +71,12 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 		previewLayer.frame = previewView.frame
 	}
 	
+}
+
+
+extension HomeViewController: AVCaptureVideoDataOutputSampleBufferDelegate {
 	
 	func captureOutput(_ output: AVCaptureOutput, didOutput sampleBuffer: CMSampleBuffer, from connection: AVCaptureConnection) {
-
 		guard let pixelBuffer = CMSampleBufferGetImageBuffer(sampleBuffer) else { return }
 		
 		let request = VNCoreMLRequest(model: model) { [weak self] (req, err) in
@@ -80,6 +93,5 @@ class HomeViewController: UIViewController, AVCaptureVideoDataOutputSampleBuffer
 		
 		try? VNImageRequestHandler(cvPixelBuffer: pixelBuffer, options: [:]).perform([request])
 	}
-
 }
 

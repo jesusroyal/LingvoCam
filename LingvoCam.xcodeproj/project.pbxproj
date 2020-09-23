@@ -68,16 +68,16 @@
 			children = (
 				67192C6D250E23F10057E163 /* AppDelegate.swift */,
 				67192C6F250E23F10057E163 /* SceneDelegate.swift */,
+				67192C73250E23F10057E163 /* Main.storyboard */,
 				67192C71250E23F10057E163 /* HomeViewController.swift */,
+				67C05305251A4814004BCA69 /* SettingsTableViewController.swift */,
 				671E29432513656B0095E227 /* TranslationService.swift */,
 				67C05302251A3DE8004BCA69 /* String+extension.swift */,
-				67192C73250E23F10057E163 /* Main.storyboard */,
-				67C05305251A4814004BCA69 /* SettingsTableViewController.swift */,
 				67C05308251A4BC3004BCA69 /* Languages.swift */,
 				67192C76250E23FB0057E163 /* Assets.xcassets */,
 				67192C78250E23FB0057E163 /* LaunchScreen.storyboard */,
-				67192C7B250E23FB0057E163 /* Info.plist */,
 				67D416952515375900F93914 /* Inceptionv3.mlmodel */,
+				67192C7B250E23FB0057E163 /* Info.plist */,
 			);
 			path = LingvoCam;
 			sourceTree = "<group>";
