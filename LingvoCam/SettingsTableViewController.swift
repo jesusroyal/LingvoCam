@@ -8,27 +8,22 @@
 
 import UIKit
 
-class SettingsTableViewController: UITableViewController {
+final class SettingsTableViewController: UITableViewController {
     
-    let languagesArray: [Language] = [Language(name: "Russian", value: "ru"), Language(name: "Polish", value: "pl"), Language(name: "Italian", value: "it")]
+    // MARK: - Private Properties
     
-    
-    let reuseIdentifier = "settingsCell"
-
-    override func viewDidLoad() {
-        super.viewDidLoad()
-
-    }
+    private let languagesArray: [Language] = [Language(name: "Russian", value: "ru"),
+                                              Language(name: "Polish", value: "pl"),
+                                              Language(name: "Italian", value: "it")]
+    private let reuseIdentifier = "settingsCell"
 
     // MARK: - Table view data source
 
     override func numberOfSections(in tableView: UITableView) -> Int {
-       
         return 1
     }
 
     override func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        
         return languagesArray.count
     }
 
@@ -37,7 +32,6 @@ class SettingsTableViewController: UITableViewController {
         let cell = tableView.dequeueReusableCell(withIdentifier: reuseIdentifier, for: indexPath)
 
         cell.textLabel?.text = languagesArray[indexPath.row].name
-
         return cell
     }
     
@@ -46,8 +40,4 @@ class SettingsTableViewController: UITableViewController {
         TranslationService.instance.targetLanguage = languagesArray[indexPath.row].value
         self.navigationController?.popViewController(animated: true)
     }
-    
-
-   
-
 }
