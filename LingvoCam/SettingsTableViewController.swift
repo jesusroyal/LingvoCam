@@ -12,9 +12,9 @@ final class SettingsTableViewController: UITableViewController {
     
     // MARK: - Private Properties
     
-    private let languagesArray: [Language] = [Language(name: "Russian", value: "ru"),
-                                              Language(name: "Polish", value: "pl"),
-                                              Language(name: "Italian", value: "it")]
+    private let languagesArray: [Language] = [Language(name: "🇷🇺Russian", value: "ru"),
+                                              Language(name: "🇵🇱Polish", value: "pl"),
+                                              Language(name: "🇮🇹Italian", value: "it")]
     private let reuseIdentifier = "settingsCell"
 
     // MARK: - Table view data source
